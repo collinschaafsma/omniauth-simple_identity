@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Omniauth::SimpleIdentity::VERSION
   s.authors     = ["Collin Schaafsma"]
   s.email       = ["collin@quickleft.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/collinschaafsma/omniauth-simple_identity"
+  s.summary     = %q{Simplified version of omniauth-identity without the view layer. Ideal for API development.}
+  s.description = %q{Simplified version of omniauth-identity without the view layer. Ideal for API development.}
 
   s.rubyforge_project = "omniauth-simple_identity"
 
