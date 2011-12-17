@@ -21,4 +21,18 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
+  #
+  s.add_runtime_dependency 'omniauth', '~> 1.0'
+
+  s.add_development_dependency 'maruku', '~> 0.6'
+  s.add_development_dependency 'simplecov', '~> 0.4'
+  s.add_development_dependency 'rack-test', '~> 0.5'
+  s.add_development_dependency 'rake', '~> 0.8'
+  s.add_development_dependency 'rspec', '~> 2.7'
+  s.add_development_dependency 'bcrypt-ruby', '~> 3.0'
+  s.add_development_dependency 'activerecord', '~> 3.1'
+  s.add_development_dependency 'mongoid'
+  s.add_development_dependency 'mongo_mapper'
+  s.add_development_dependency 'bson_ext'
+
 end
