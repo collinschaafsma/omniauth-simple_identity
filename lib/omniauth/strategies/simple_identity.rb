@@ -10,7 +10,7 @@ module OmniAuth
       option :on_failed_registration, nil
 
       def request_phase
-        [ 404, {'Content-Type' => 'text/plain'}, 'file not found' ]
+        [ 404, {'Content-Type' => 'text/plain'}, ['file not found'] ]
       end
 
       def callback_phase
@@ -31,7 +31,7 @@ module OmniAuth
       end
 
       def registration_form
-        [ 404, {'Content-Type' => 'text/plain'}, 'file not found' ]
+        [ 404, {'Content-Type' => 'text/plain'}, ['file not found'] ]
       end
 
       def registration_phase
