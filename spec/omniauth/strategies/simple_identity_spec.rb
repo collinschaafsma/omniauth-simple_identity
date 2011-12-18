@@ -32,7 +32,7 @@ describe OmniAuth::Strategies::SimpleIdentity do
   describe '#request_phase' do
     it 'should display a form' do
       get '/auth/simpleidentity'
-      last_response.body.should be_include("<form")
+      last_response.status.should == 404
     end
   end
 
@@ -72,9 +72,9 @@ describe OmniAuth::Strategies::SimpleIdentity do
   end
 
   describe '#registration_form' do
-    it 'should trigger from /auth/identity/register by default' do
+    it 'should not be displayed by default' do
       get '/auth/simpleidentity/register'
-      last_response.body.should be_include("Register Identity")
+      last_response.status.should == 404
     end
   end
 
@@ -111,9 +111,9 @@ describe OmniAuth::Strategies::SimpleIdentity do
       end
 
       context 'default' do
-        it 'should show registration form' do
+        it 'should 404' do
           post '/auth/simpleidentity/register', properties
-          last_response.body.should be_include("Register Identity")
+          last_response.status.should == 404
         end
       end
 

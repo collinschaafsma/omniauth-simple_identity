@@ -10,14 +10,7 @@ module OmniAuth
       option :on_failed_registration, nil
 
       def request_phase
-        OmniAuth::Form.build(
-          :title => (options[:title] || "Identity Verification"),
-          :url => callback_path
-        ) do |f|
-          f.text_field 'Login', 'auth_key'
-          f.password_field 'Password', 'password'
-          f.html "<p align='center'><a href='#{registration_path}'>Create an Identity</a></p>"
-        end.to_response 
+        [ 404, {'Content-Type' => 'text/plain'}, 'file not found' ]
       end
 
       def callback_phase
@@ -38,13 +31,7 @@ module OmniAuth
       end
 
       def registration_form
-        OmniAuth::Form.build(:title => 'Register Identity') do |f|
-          options[:fields].each do |field|
-            f.text_field field.to_s.capitalize, field.to_s
-          end
-          f.password_field 'Password', 'password'
-          f.password_field 'Confirm Password', 'password_confirmation'
-        end.to_response
+        [ 404, {'Content-Type' => 'text/plain'}, 'file not found' ]
       end
 
       def registration_phase
